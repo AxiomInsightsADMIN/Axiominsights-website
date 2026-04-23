@@ -1,0 +1,58 @@
+---
+export interface Props {
+  /** Pixel height of the rendered mark. Width is proportional (~1:1). */
+  size?: number;
+  /** Accent color for irises. Defaults to the electric blue brand accent. */
+  accent?: string;
+  /** Pupil color. Should match the surface the mark sits on. */
+  pupil?: string;
+  /** Optional extra class names. */
+  class?: string;
+}
+
+const {
+  size = 40,
+  accent = '#4DC6FF',
+  pupil = '#0F1216',
+  class: className = ''
+} = Astro.props;
+---
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  width={size}
+  height={size}
+  role="img"
+  aria-label="Axiom Insights mark — nine eyes of Argus Panoptes"
+  class={className}
+>
+  <g fill={accent}>
+    <!-- Top -->
+    <ellipse cx="100" cy="22" rx="14" ry="9" opacity="0.5"/>
+    <circle cx="100" cy="22" r="4" fill={pupil}/>
+
+    <!-- Upper row -->
+    <ellipse cx="62" cy="55" rx="14" ry="9" opacity="0.7"/>
+    <circle cx="62" cy="55" r="4" fill={pupil}/>
+    <ellipse cx="138" cy="55" rx="14" ry="9" opacity="0.7"/>
+    <circle cx="138" cy="55" r="4" fill={pupil}/>
+
+    <!-- Middle row (center emphasized) -->
+    <ellipse cx="30" cy="100" rx="14" ry="9" opacity="0.9"/>
+    <circle cx="30" cy="100" r="4.5" fill={pupil}/>
+    <ellipse cx="100" cy="100" rx="20" ry="13"/>
+    <circle cx="100" cy="100" r="7" fill={pupil}/>
+    <ellipse cx="170" cy="100" rx="14" ry="9" opacity="0.9"/>
+    <circle cx="170" cy="100" r="4.5" fill={pupil}/>
+
+    <!-- Lower row -->
+    <ellipse cx="62" cy="145" rx="14" ry="9" opacity="0.7"/>
+    <circle cx="62" cy="145" r="4" fill={pupil}/>
+    <ellipse cx="138" cy="145" rx="14" ry="9" opacity="0.7"/>
+    <circle cx="138" cy="145" r="4" fill={pupil}/>
+
+    <!-- Bottom -->
+    <ellipse cx="100" cy="178" rx="14" ry="9" opacity="0.5"/>
+    <circle cx="100" cy="178" r="4" fill={pupil}/>
+  </g>
+</svg>

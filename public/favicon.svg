@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" fill="#0F1216"/>
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle"
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-        font-weight="800" font-size="18" letter-spacing="1.5" fill="#4DC6FF">AX</text>
+  <g fill="#4DC6FF">
+    <ellipse cx="14" cy="32" rx="6" ry="4" opacity="0.85"/>
+    <circle cx="14" cy="32" r="2" fill="#0F1216"/>
+    <ellipse cx="32" cy="32" rx="9" ry="6"/>
+    <circle cx="32" cy="32" r="3" fill="#0F1216"/>
+    <ellipse cx="50" cy="32" rx="6" ry="4" opacity="0.85"/>
+    <circle cx="50" cy="32" r="2" fill="#0F1216"/>
+  </g>
 </svg>
