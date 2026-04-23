@@ -13,7 +13,8 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#1F3A5F" />
+    <meta name="theme-color" content="#0F1216" />
+    <meta name="color-scheme" content="dark" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -37,20 +38,33 @@ const { title, description } = Astro.props;
 
 <style is:global>
   :root {
-    /* Brand colors — navy-led, restrained palette */
-    --color-navy: #1F3A5F;
-    --color-navy-deep: #15273F;
-    --color-navy-hover: #172D49;
-    --color-bg: #FFFFFF;
-    --color-bg-alt: #F5F7FA;
-    --color-bg-dark: #0E1B2E;
-    --color-accent: #E8EEF5;
-    --color-text: #0A0A0A;
-    --color-text-muted: #4A5568;
-    --color-text-inverse: #FFFFFF;
-    --color-text-inverse-muted: #B8C3D4;
-    --color-border: #D8DEE6;
-    --color-border-strong: #1F3A5F;
+    /* Smoky grey surfaces */
+    --color-bg: #0F1216;
+    --color-bg-alt: #161A20;
+    --color-bg-elevated: #1E242C;
+    --color-bg-darker: #0A0C10;
+    --color-bg-footer: #07090C;
+
+    /* Electric blue accent family */
+    --color-electric: #4DC6FF;
+    --color-electric-soft: #7DD7FF;
+    --color-electric-deep: #1E8EC7;
+    --color-electric-glow: rgba(77, 198, 255, 0.40);
+    --color-electric-glow-soft: rgba(77, 198, 255, 0.18);
+    --color-electric-muted: rgba(77, 198, 255, 0.08);
+
+    /* Legacy navy retained as structural undertone only */
+    --color-navy-trace: #1F3A5F;
+
+    /* Text */
+    --color-text: #E8ECF1;
+    --color-text-muted: #9AA3B2;
+    --color-text-subtle: #5C6778;
+
+    /* Borders */
+    --color-border: rgba(255, 255, 255, 0.06);
+    --color-border-strong: rgba(77, 198, 255, 0.28);
+    --color-border-hover: rgba(77, 198, 255, 0.55);
 
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -70,6 +84,7 @@ const { title, description } = Astro.props;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    background: var(--color-bg);
   }
 
   body {
@@ -83,7 +98,7 @@ const { title, description } = Astro.props;
   }
 
   h1, h2, h3, h4 {
-    color: var(--color-navy);
+    color: var(--color-text);
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.1;
@@ -114,15 +129,16 @@ const { title, description } = Astro.props;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-navy);
+    color: var(--color-electric);
   }
 
   p {
     margin: 0 0 1.125rem;
+    color: var(--color-text-muted);
   }
 
   a {
-    color: var(--color-navy);
+    color: var(--color-electric);
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
@@ -130,6 +146,7 @@ const { title, description } = Astro.props;
   }
 
   a:hover {
+    color: var(--color-electric-soft);
     text-decoration-thickness: 2px;
   }
 
@@ -148,7 +165,19 @@ const { title, description } = Astro.props;
   }
 
   ::selection {
-    background: var(--color-navy);
-    color: var(--color-bg);
+    background: var(--color-electric);
+    color: var(--color-bg-darker);
+  }
+
+  /* Thin gradient section divider — reusable wispy element */
+  .wisp-divider {
+    height: 1px;
+    border: 0;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      var(--color-electric) 50%,
+      transparent 100%);
+    opacity: 0.35;
+    margin: 0;
   }
 </style>
