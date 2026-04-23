@@ -1,17 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = 'Axiom Insights LLC — Integrated Multi-Sensor Survey Technology';
-const description = 'Axiom Insights builds integrated, single-unit survey kits and structured data tooling for field environment characterization. Wyoming-based technology company.';
+const title = 'Axiom Insights LLC — Data Analytics and Web & Systems Design';
+const description = 'Axiom Insights turns field-derived data into structured analytics and clean interfaces. Wyoming-based data analytics and web systems design company.';
 ---
 
 <Layout title={title} description={description}>
+  <!-- Utility bar -->
+  <div class="util-bar">
+    <div class="container">
+      <span>Axiom Insights LLC</span>
+      <span class="util-sep">&middot;</span>
+      <span>Data analytics &amp; web systems design</span>
+    </div>
+  </div>
+
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="wordmark" aria-label="Axiom Insights home">AXIOM</a>
+      <a href="/" class="wordmark" aria-label="Axiom Insights home">
+        <span class="wordmark-mark">AXIOM</span>
+        <span class="wordmark-sub">Insights</span>
+      </a>
       <nav aria-label="Primary">
-        <a href="#what-we-build">What we build</a>
-        <a href="#contact">Contact</a>
+        <a href="#what-we-do">What we do</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#proof">Work</a>
+        <a href="#company">Company</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
@@ -20,60 +36,80 @@ const description = 'Axiom Insights builds integrated, single-unit survey kits a
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Field survey, integrated.</h1>
+        <div class="hero-eyebrow">Data analytics &middot; Web &amp; systems design</div>
+        <h1>From raw collection<br />to decision-ready.</h1>
         <p class="lead">
-          Axiom Insights builds the hardware and structured data tooling that turn fragmented
-          field-survey work into one operator-carried unit, one synchronized record, one consistent dataset.
+          Axiom Insights is a data analytics and web systems design company. We turn structured
+          field data into decision-ready analytics and deliver the interfaces, dashboards, and
+          tooling that put it in front of the people who need it.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#contact">Get in touch</a>
-          <a class="btn btn-secondary" href="#what-we-build">What we build</a>
+          <a class="btn btn-ghost" href="#what-we-do">What we do <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </section>
 
-    <!-- What We Build -->
-    <section id="what-we-build" class="section">
-      <div class="container">
-        <h2>What we build</h2>
-        <p>
-          Axiom Insights designs integrated, operator-carried survey kits that fuse passive
-          wireless signal capture, geolocation, imagery, video, and ambient environmental data
-          into one synchronized, structured record. We pair the hardware with analytics and
-          visualization tooling that turns survey data into queryable, decision-ready outputs.
-          The product is built around a simple operating premise: the structure of survey data
-          should not depend on which operator happened to be in the field that day.
-        </p>
+    <!-- What we do -->
+    <section id="what-we-do" class="section">
+      <div class="container section-grid">
+        <div class="section-head">
+          <h4>What we do</h4>
+          <h2>The analytics and delivery layer for field-derived data.</h2>
+        </div>
+        <div class="section-body">
+          <p>
+            Axiom Insights builds the analytics and delivery layer for organizations that
+            collect data from the field. We take raw, fragmented, or operator-collected inputs
+            &mdash; wireless signal capture, geolocation, imagery, video, and ambient
+            environmental data &mdash; and turn them into one synchronized, structured record,
+            queryable by the people making decisions.
+          </p>
+          <p>
+            We pair that with web-based dashboards, reports, and client-facing interfaces so
+            the data is usable the moment it lands, not a week later.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Capabilities -->
-    <section class="section section-alt">
+    <section id="capabilities" class="section section-alt">
       <div class="container">
-        <h2>Capabilities</h2>
+        <div class="section-head centered">
+          <h4>Capabilities</h4>
+          <h2>Three disciplines, one pipeline.</h2>
+        </div>
         <div class="cards">
           <article class="card">
-            <h3>Integrated multi-sensor survey kit</h3>
+            <div class="card-bar" aria-hidden="true"></div>
+            <div class="card-number">01</div>
+            <h3>Data analytics and insights</h3>
             <p>
-              Single ruggedized, operator-carried unit fusing Wi-Fi, Bluetooth, BLE, and cellular
-              passive capture with GPS, imagery, video, and ambient environmental sensors on a
-              synchronized timestamp.
+              Ingestion, normalization, and analysis of collected field data. We clean
+              fragmented inputs, structure them against consistent schemas, and produce
+              analytics ready for decision-makers.
             </p>
           </article>
           <article class="card">
-            <h3>Structured collection methodology</h3>
+            <div class="card-bar" aria-hidden="true"></div>
+            <div class="card-number">02</div>
+            <h3>Web and systems design</h3>
             <p>
-              Doctrine-encoded field-survey procedures that enforce the same fields, the same
-              imagery minimums, and the same metadata structure across every survey, every
-              operator, every location.
+              Custom dashboards, client-facing web interfaces, and data-delivery systems built
+              to match how the work actually happens. Clear, fast, and built to show the data
+              &mdash; not decorate it.
             </p>
           </article>
           <article class="card">
-            <h3>Analytics and visualization tooling</h3>
+            <div class="card-bar" aria-hidden="true"></div>
+            <div class="card-number">03</div>
+            <h3>Integrated signal and sensor capture</h3>
             <p>
-              Ingestion, normalization, and presentation of survey data into structured, reusable
-              outputs. Built so an analyst can work with the data immediately, not after a week
-              of cleanup.
+              We design the tools and systems that fuse wireless signal capture, geolocation,
+              imagery, video, and ambient environmental data into one synchronized, structured
+              record &mdash; so the data hitting our analytics pipeline is consistent across
+              operators, locations, and collection runs.
             </p>
           </article>
         </div>
@@ -82,66 +118,128 @@ const description = 'Axiom Insights builds integrated, single-unit survey kits a
 
     <!-- Focus Areas -->
     <section class="section">
-      <div class="container">
-        <h2>What we work on</h2>
-        <p>Axiom's tooling is dual-use by design. Initial focus areas include:</p>
-        <ul class="focus-list">
-          <li>Anti-fraud and transnational crime infrastructure mapping</li>
-          <li>Critical infrastructure RF baselining and anomaly detection</li>
-          <li>Commercial site-security and facility-environment characterization</li>
-          <li>Anti-trafficking and humanitarian field-survey support for NGOs and investigators</li>
-        </ul>
+      <div class="container section-grid">
+        <div class="section-head">
+          <h4>What we work on</h4>
+          <h2>Clients whose decisions depend on field-derived data.</h2>
+        </div>
+        <div class="section-body">
+          <p>Focus areas include:</p>
+          <ul class="focus-list">
+            <li>Anti-fraud and transnational crime infrastructure mapping</li>
+            <li>Critical infrastructure RF baselining and anomaly detection</li>
+            <li>Commercial site-security and facility-environment characterization</li>
+            <li>Anti-trafficking and humanitarian field-survey support for NGOs and investigators</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- Proof -->
-    <section class="section section-alt">
-      <div class="container">
-        <h2>Proven in the field</h2>
-        <p>
-          Axiom's principal led the technical execution of a published wireless-infrastructure
-          survey of suspected pig-butchering scam-compound locations in Southeast Asia. The work
-          generated <strong>112,312 unique Wi-Fi, Bluetooth, and cellular detections</strong>
-          across surveyed areas, identified four distinct compound-cluster formations, and mapped
-          the wireless infrastructure of one of the most active transnational scam ecosystems
-          documented to date. The methodology developed there is the foundation of every product
-          Axiom builds.
-        </p>
+    <section id="proof" class="section section-dark">
+      <div class="container section-grid">
+        <div class="section-head">
+          <h4>Proven in the field</h4>
+          <h2>A published transnational-crime survey, end to end.</h2>
+        </div>
+        <div class="section-body">
+          <p>
+            Axiom's principal led the technical execution of a published wireless-infrastructure
+            survey of suspected pig-butchering scam-compound locations in Southeast Asia.
+          </p>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="stat-value">112,312</div>
+              <div class="stat-label">Unique Wi-Fi, Bluetooth, and cellular detections</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">4</div>
+              <div class="stat-label">Distinct compound-cluster formations identified</div>
+            </div>
+          </div>
+          <p>
+            The work mapped the wireless infrastructure of one of the most active transnational
+            scam ecosystems documented to date. The methodology developed there is the foundation
+            of every product Axiom builds.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Company -->
-    <section class="section">
-      <div class="container">
-        <h2>Company</h2>
-        <p>
-          Axiom Insights LLC is a Wyoming-based technology company. We design hardware and
-          structured data tooling for repeatable, evidence-based field survey work. We work with
-          commercial security firms, NGOs and investigative organizations, infrastructure
-          operators, and other clients who need consistent, structured data from the field.
-        </p>
-        <p>We are headquartered in Sheridan, Wyoming.</p>
+    <section id="company" class="section">
+      <div class="container section-grid">
+        <div class="section-head">
+          <h4>Company</h4>
+          <h2>Wyoming-based. Built for repeatable, evidence-based work.</h2>
+        </div>
+        <div class="section-body">
+          <p>
+            Axiom Insights LLC is a Wyoming-based data analytics and web systems design company.
+            We work with commercial security firms, NGOs and investigative organizations,
+            infrastructure operators, and other clients who need consistent, structured data
+            from the field &mdash; and the analytics and interfaces to put it to work.
+          </p>
+          <p>Headquartered in Sheridan, Wyoming.</p>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section section-alt">
-      <div class="container">
-        <h2>Get in touch</h2>
-        <p>For partnerships, customer inquiries, or questions, contact us at:</p>
-        <dl class="contact-list">
-          <dt>Email</dt>
-          <dd><a href="mailto:contact@axiominsights.org">contact@axiominsights.org</a></dd>
-          <dt>Mail</dt>
-          <dd>Axiom Insights LLC<br />30 N Gould St, Ste #41601<br />Sheridan, WY 82801</dd>
-        </dl>
+      <div class="container section-grid">
+        <div class="section-head">
+          <h4>Get in touch</h4>
+          <h2>Partnerships, inquiries, and field collaborations.</h2>
+        </div>
+        <div class="section-body">
+          <dl class="contact-list">
+            <dt>Email</dt>
+            <dd><a href="mailto:contact@axiominsights.org">contact@axiominsights.org</a></dd>
+            <dt>Mail</dt>
+            <dd>
+              Axiom Insights LLC<br />
+              30 N Gould St, Ste #41601<br />
+              Sheridan, WY 82801
+            </dd>
+          </dl>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Axiom Insights LLC &nbsp;&bull;&nbsp; Sheridan, Wyoming &nbsp;&bull;&nbsp; &copy; 2026</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="wordmark-mark">AXIOM</div>
+        <p>
+          Data analytics and web &amp; systems design for organizations that
+          work with field-derived data.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#proof">Work</a></li>
+          <li><a href="#company">Company</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@axiominsights.org">contact@axiominsights.org</a></li>
+          <li>Sheridan, Wyoming</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <div class="container">
+        <span>Axiom Insights LLC</span>
+        <span>&copy; 2026</span>
+      </div>
     </div>
   </footer>
 </Layout>
@@ -155,150 +253,427 @@ const description = 'Axiom Insights builds integrated, single-unit survey kits a
     padding-right: var(--section-padding-x);
   }
 
+  /* Utility top bar */
+  .util-bar {
+    background: var(--color-navy-deep);
+    color: var(--color-text-inverse-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+  .util-bar .container {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+  .util-sep {
+    margin: 0 0.75rem;
+    opacity: 0.5;
+  }
+
+  /* Header */
   .site-header {
     border-bottom: 1px solid var(--color-border);
     background: var(--color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: saturate(140%) blur(8px);
+    background: rgba(255, 255, 255, 0.92);
   }
-
   .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    gap: 2rem;
   }
-
   .wordmark {
-    font-weight: 700;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    color: var(--color-navy);
+    text-decoration: none;
+  }
+  .wordmark-mark {
+    font-weight: 800;
     font-size: 1.25rem;
     letter-spacing: 0.15em;
-    color: var(--color-navy);
-    text-decoration: none;
+    line-height: 1;
   }
-
-  nav a {
-    margin-left: 1.5rem;
+  .wordmark-sub {
+    font-size: 0.8125rem;
     color: var(--color-text-muted);
-    text-decoration: none;
-    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
   }
-
-  nav a:hover {
-    color: var(--color-navy);
-  }
-
-  .hero {
-    padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 4.5rem);
-  }
-
-  .hero .lead {
-    font-size: 1.1875rem;
-    color: var(--color-text-muted);
-    max-width: 620px;
-    margin-top: 1.25rem;
-  }
-
-  .cta-row {
-    margin-top: 2rem;
+  nav[aria-label="Primary"] {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.25rem;
   }
-
-  .btn {
-    display: inline-block;
-    padding: 0.75rem 1.375rem;
+  nav[aria-label="Primary"] a {
+    padding: 0.5rem 0.875rem;
+    color: var(--color-text);
+    text-decoration: none;
     font-size: 0.9375rem;
     font-weight: 500;
-    text-decoration: none;
     border-radius: 2px;
-    border: 1px solid var(--color-navy);
-    transition: background-color 120ms ease, color 120ms ease;
+    transition: color 120ms ease, background 120ms ease;
   }
-
-  .btn-primary {
-    background: var(--color-navy);
-    color: #ffffff;
-  }
-
-  .btn-primary:hover {
-    background: #172D49;
-  }
-
-  .btn-secondary {
-    background: transparent;
+  nav[aria-label="Primary"] a:hover {
     color: var(--color-navy);
-  }
-
-  .btn-secondary:hover {
     background: var(--color-accent);
   }
-
-  .section {
-    padding: var(--section-padding-y) 0;
-    border-top: 1px solid var(--color-border);
+  nav[aria-label="Primary"] a.nav-cta {
+    margin-left: 0.5rem;
+    background: var(--color-navy);
+    color: var(--color-text-inverse);
+    padding: 0.625rem 1.125rem;
+  }
+  nav[aria-label="Primary"] a.nav-cta:hover {
+    background: var(--color-navy-hover);
   }
 
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--color-bg-alt) 100%);
+    padding: clamp(5rem, 11vw, 9rem) 0 clamp(4rem, 8vw, 7rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(31, 58, 95, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(31, 58, 95, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at 70% 10%, #000 10%, transparent 70%);
+  }
+  .hero .container {
+    position: relative;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-navy);
+    padding: 0.5rem 0.875rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+  }
+  .hero h1 {
+    max-width: 900px;
+  }
+  .hero .lead {
+    font-size: clamp(1.125rem, 1.6vw, 1.3125rem);
+    color: var(--color-text-muted);
+    max-width: 720px;
+    margin-top: 1.5rem;
+  }
+  .cta-row {
+    margin-top: 2.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9375rem 1.625rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    transition: background-color 150ms ease, color 150ms ease, transform 120ms ease;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary {
+    background: var(--color-navy);
+    color: var(--color-text-inverse);
+    border-color: var(--color-navy);
+  }
+  .btn-primary:hover {
+    background: var(--color-navy-hover);
+    border-color: var(--color-navy-hover);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-navy);
+    border-color: var(--color-navy);
+  }
+  .btn-ghost:hover {
+    background: var(--color-navy);
+    color: var(--color-text-inverse);
+  }
+
+  /* Generic sections */
+  .section {
+    padding: var(--section-padding-y) 0;
+  }
   .section-alt {
     background: var(--color-bg-alt);
   }
-
-  .cards {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .section-dark {
+    background: var(--color-bg-dark);
+    color: var(--color-text-inverse);
+  }
+  .section-dark h2,
+  .section-dark h3,
+  .section-dark h4 {
+    color: var(--color-text-inverse);
+  }
+  .section-dark h4 {
+    color: #8BA3C7;
+  }
+  .section-dark p {
+    color: var(--color-text-inverse-muted);
+  }
+  .section-dark strong {
+    color: var(--color-text-inverse);
   }
 
+  .section-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .section-head h4 {
+    margin-bottom: 0.75rem;
+  }
+  .section-head h2 {
+    max-width: 18ch;
+  }
+  .section-head.centered {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 720px;
+    margin-bottom: 3rem;
+  }
+  .section-head.centered h2 {
+    max-width: none;
+  }
+  @media (min-width: 900px) {
+    .section-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+      gap: 4rem;
+    }
+    .section-head {
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+    }
+  }
+
+  /* Capability cards */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 800px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
   .card {
     background: var(--color-bg);
     border: 1px solid var(--color-border);
-    padding: 1.5rem 1.5rem 1rem;
-    border-radius: 2px;
+    padding: 2rem 1.75rem 1.75rem;
+    position: relative;
+    transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
   }
-
+  .card:hover {
+    border-color: var(--color-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px -20px rgba(31, 58, 95, 0.25);
+  }
+  .card-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 56px;
+    background: var(--color-navy);
+  }
+  .card-number {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
   .card h3 {
-    margin-bottom: 0.5rem;
+    color: var(--color-navy);
+    margin-bottom: 0.75rem;
   }
-
   .card p {
     color: var(--color-text-muted);
     font-size: 0.9375rem;
     line-height: 1.6;
+    margin: 0;
   }
 
+  /* Focus list */
   .focus-list {
-    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  .focus-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 1.0625rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .focus-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.45rem;
+    width: 10px;
+    height: 2px;
+    background: var(--color-navy);
+  }
+  .focus-list li:last-child {
+    border-bottom: none;
   }
 
+  /* Stats */
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  @media (min-width: 600px) {
+    .stat-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .stat-value {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    font-weight: 800;
+    color: var(--color-text-inverse);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 0.625rem;
+  }
+  .stat-label {
+    color: var(--color-text-inverse-muted);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  /* Contact */
   .contact-list {
-    margin-top: 1rem;
+    margin: 0;
     display: grid;
     grid-template-columns: max-content 1fr;
-    gap: 0.5rem 1.25rem;
+    gap: 0.75rem 1.75rem;
+    align-items: baseline;
   }
-
   .contact-list dt {
     color: var(--color-text-muted);
-    font-weight: 500;
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
-
   .contact-list dd {
     margin: 0;
+    font-size: 1.0625rem;
   }
 
+  /* Footer */
   .site-footer {
-    border-top: 1px solid var(--color-border);
-    padding: 2rem 0;
-    color: var(--color-text-muted);
-    font-size: 0.875rem;
-    text-align: center;
+    background: var(--color-bg-dark);
+    color: var(--color-text-inverse-muted);
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: clamp(3rem, 5vw, 4.5rem);
+    padding-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  }
+  @media (min-width: 800px) {
+    .footer-inner {
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+  .footer-brand .wordmark-mark {
+    color: var(--color-text-inverse);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .footer-brand p {
+    color: var(--color-text-inverse-muted);
+    font-size: 0.9375rem;
+    max-width: 380px;
+  }
+  .footer-col h4 {
+    color: var(--color-text-inverse);
+    margin-bottom: 1rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  .footer-col a {
+    color: var(--color-text-inverse-muted);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 120ms ease;
+  }
+  .footer-col a:hover {
+    color: var(--color-text-inverse);
+  }
+  .footer-base {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.25rem 0;
+    font-size: 0.8125rem;
+  }
+  .footer-base .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .site-footer p {
-    margin: 0;
+  /* Mobile nav adjustments */
+  @media (max-width: 720px) {
+    nav[aria-label="Primary"] {
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    nav[aria-label="Primary"]::-webkit-scrollbar {
+      display: none;
+    }
+    nav[aria-label="Primary"] a {
+      padding: 0.5rem 0.625rem;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+    nav[aria-label="Primary"] a.nav-cta {
+      padding: 0.5rem 0.875rem;
+    }
   }
 </style>
