@@ -25,6 +25,9 @@ const { title, description } = Astro.props;
     <meta name="twitter:description" content={description} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
     <title>{title}</title>
   </head>
   <body>
@@ -34,19 +37,27 @@ const { title, description } = Astro.props;
 
 <style is:global>
   :root {
+    /* Brand colors — navy-led, restrained palette */
     --color-navy: #1F3A5F;
+    --color-navy-deep: #15273F;
+    --color-navy-hover: #172D49;
     --color-bg: #FFFFFF;
-    --color-bg-alt: #FAFAFA;
+    --color-bg-alt: #F5F7FA;
+    --color-bg-dark: #0E1B2E;
     --color-accent: #E8EEF5;
     --color-text: #0A0A0A;
-    --color-text-muted: #4A4A4A;
+    --color-text-muted: #4A5568;
+    --color-text-inverse: #FFFFFF;
+    --color-text-inverse-muted: #B8C3D4;
     --color-border: #D8DEE6;
+    --color-border-strong: #1F3A5F;
 
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-    --content-width: 760px;
-    --section-padding-y: 5rem;
-    --section-padding-x: 1.5rem;
+    --content-width: 1200px;
+    --content-width-narrow: 880px;
+    --section-padding-y: clamp(4rem, 8vw, 7rem);
+    --section-padding-x: clamp(1.25rem, 4vw, 3rem);
   }
 
   *, *::before, *::after {
@@ -58,13 +69,14 @@ const { title, description } = Astro.props;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   body {
     margin: 0;
     font-family: var(--font-sans);
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.6;
     color: var(--color-text);
     background: var(--color-bg);
     font-weight: 400;
@@ -72,37 +84,49 @@ const { title, description } = Astro.props;
 
   h1, h2, h3, h4 {
     color: var(--color-navy);
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    line-height: 1.2;
-    margin: 0 0 0.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 1rem;
   }
 
   h1 {
-    font-size: clamp(2.25rem, 5vw, 3.25rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    font-size: clamp(2.75rem, 6.5vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
   }
 
   h2 {
-    font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+    letter-spacing: -0.025em;
   }
 
   h3 {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-size: 0.8125rem;
     font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-navy);
   }
 
   p {
-    margin: 0 0 1rem;
+    margin: 0 0 1.125rem;
   }
 
   a {
     color: var(--color-navy);
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
     text-decoration-thickness: 1px;
+    transition: text-decoration-thickness 120ms ease, color 120ms ease;
   }
 
   a:hover {
@@ -115,7 +139,12 @@ const { title, description } = Astro.props;
   }
 
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.625rem;
+  }
+
+  strong {
+    font-weight: 700;
+    color: var(--color-text);
   }
 
   ::selection {
