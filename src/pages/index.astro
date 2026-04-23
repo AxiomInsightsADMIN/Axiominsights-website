@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ArgusMark from '../components/ArgusMark.astro';
 
 const title = 'Axiom Insights LLC — Data Analytics and Web & Systems Design';
 const description = 'Axiom Insights turns field-derived data into structured analytics and clean interfaces. Wyoming-based data analytics and web systems design company.';
@@ -19,6 +20,7 @@ const description = 'Axiom Insights turns field-derived data into structured ana
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="wordmark" aria-label="Axiom Insights home">
+        <ArgusMark size={34} pupil="#0F1216" class="wordmark-argus" />
         <span class="wordmark-mark">AXIOM</span>
         <span class="wordmark-sub">Insights</span>
       </a>
@@ -214,7 +216,13 @@ const description = 'Axiom Insights turns field-derived data into structured ana
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <div class="wordmark-mark">AXIOM</div>
+        <div class="footer-lockup">
+          <ArgusMark size={48} pupil="#07090C" />
+          <div class="footer-lockup-text">
+            <div class="wordmark-mark">AXIOM</div>
+            <div class="wordmark-sub-alt">Insights</div>
+          </div>
+        </div>
         <p>
           Data analytics and web &amp; systems design for organizations that
           work with field-derived data.
@@ -293,10 +301,19 @@ const description = 'Axiom Insights turns field-derived data into structured ana
   }
   .wordmark {
     display: inline-flex;
-    align-items: baseline;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.625rem;
     color: var(--color-text);
     text-decoration: none;
+  }
+  .wordmark-argus {
+    flex-shrink: 0;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(77, 198, 255, 0.25));
+    transition: filter 200ms ease;
+  }
+  .wordmark:hover .wordmark-argus {
+    filter: drop-shadow(0 0 20px rgba(77, 198, 255, 0.55));
   }
   .wordmark-mark {
     font-weight: 800;
@@ -304,13 +321,21 @@ const description = 'Axiom Insights turns field-derived data into structured ana
     letter-spacing: 0.18em;
     line-height: 1;
     color: var(--color-text);
-    text-shadow: 0 0 24px rgba(77, 198, 255, 0.25);
+    text-shadow: 0 0 24px rgba(77, 198, 255, 0.20);
   }
   .wordmark-sub {
     font-size: 0.8125rem;
     color: var(--color-electric);
     font-weight: 500;
     letter-spacing: 0.04em;
+    margin-left: 0.125rem;
+  }
+  .wordmark-sub-alt {
+    font-size: 0.875rem;
+    color: var(--color-electric);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin-top: 0.25rem;
   }
   nav[aria-label="Primary"] {
     display: flex;
@@ -672,8 +697,17 @@ const description = 'Axiom Insights turns field-derived data into structured ana
   }
   .footer-brand .wordmark-mark {
     color: var(--color-text);
-    margin-bottom: 1rem;
     display: block;
+  }
+  .footer-lockup {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-lockup-text {
+    display: flex;
+    flex-direction: column;
   }
   .footer-brand p {
     color: var(--color-text-subtle);
