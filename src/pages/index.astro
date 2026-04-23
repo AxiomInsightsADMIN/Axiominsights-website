@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Axiom Insights LLC — Integrated Multi-Sensor Survey Technology';
+const description = 'Axiom Insights builds integrated, single-unit survey kits and structured data tooling for field environment characterization. Wyoming-based technology company.';
+---
+
+<Layout title={title} description={description}>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="wordmark" aria-label="Axiom Insights home">AXIOM</a>
+      <nav aria-label="Primary">
+        <a href="#what-we-build">What we build</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Field survey, integrated.</h1>
+        <p class="lead">
+          Axiom Insights builds the hardware and structured data tooling that turn fragmented
+          field-survey work into one operator-carried unit, one synchronized record, one consistent dataset.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="#what-we-build">What we build</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Build -->
+    <section id="what-we-build" class="section">
+      <div class="container">
+        <h2>What we build</h2>
+        <p>
+          Axiom Insights designs integrated, operator-carried survey kits that fuse passive
+          wireless signal capture, geolocation, imagery, video, and ambient environmental data
+          into one synchronized, structured record. We pair the hardware with analytics and
+          visualization tooling that turns survey data into queryable, decision-ready outputs.
+          The product is built around a simple operating premise: the structure of survey data
+          should not depend on which operator happened to be in the field that day.
+        </p>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Capabilities</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Integrated multi-sensor survey kit</h3>
+            <p>
+              Single ruggedized, operator-carried unit fusing Wi-Fi, Bluetooth, BLE, and cellular
+              passive capture with GPS, imagery, video, and ambient environmental sensors on a
+              synchronized timestamp.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Structured collection methodology</h3>
+            <p>
+              Doctrine-encoded field-survey procedures that enforce the same fields, the same
+              imagery minimums, and the same metadata structure across every survey, every
+              operator, every location.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Analytics and visualization tooling</h3>
+            <p>
+              Ingestion, normalization, and presentation of survey data into structured, reusable
+              outputs. Built so an analyst can work with the data immediately, not after a week
+              of cleanup.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus Areas -->
+    <section class="section">
+      <div class="container">
+        <h2>What we work on</h2>
+        <p>Axiom's tooling is dual-use by design. Initial focus areas include:</p>
+        <ul class="focus-list">
+          <li>Anti-fraud and transnational crime infrastructure mapping</li>
+          <li>Critical infrastructure RF baselining and anomaly detection</li>
+          <li>Commercial site-security and facility-environment characterization</li>
+          <li>Anti-trafficking and humanitarian field-survey support for NGOs and investigators</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Proof -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Proven in the field</h2>
+        <p>
+          Axiom's principal led the technical execution of a published wireless-infrastructure
+          survey of suspected pig-butchering scam-compound locations in Southeast Asia. The work
+          generated <strong>112,312 unique Wi-Fi, Bluetooth, and cellular detections</strong>
+          across surveyed areas, identified four distinct compound-cluster formations, and mapped
+          the wireless infrastructure of one of the most active transnational scam ecosystems
+          documented to date. The methodology developed there is the foundation of every product
+          Axiom builds.
+        </p>
+      </div>
+    </section>
+
+    <!-- Company -->
+    <section class="section">
+      <div class="container">
+        <h2>Company</h2>
+        <p>
+          Axiom Insights LLC is a Wyoming-based technology company. We design hardware and
+          structured data tooling for repeatable, evidence-based field survey work. We work with
+          commercial security firms, NGOs and investigative organizations, infrastructure
+          operators, and other clients who need consistent, structured data from the field.
+        </p>
+        <p>We are headquartered in Sheridan, Wyoming.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2>Get in touch</h2>
+        <p>For partnerships, customer inquiries, or questions, contact us at:</p>
+        <dl class="contact-list">
+          <dt>Email</dt>
+          <dd><a href="mailto:contact@axiominsights.org">contact@axiominsights.org</a></dd>
+          <dt>Mail</dt>
+          <dd>Axiom Insights LLC<br />30 N Gould St, Ste #41601<br />Sheridan, WY 82801</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Axiom Insights LLC &nbsp;&bull;&nbsp; Sheridan, Wyoming &nbsp;&bull;&nbsp; &copy; 2026</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  .container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+  }
+
+  .site-header {
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .wordmark {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+    color: var(--color-navy);
+    text-decoration: none;
+  }
+
+  nav a {
+    margin-left: 1.5rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9375rem;
+  }
+
+  nav a:hover {
+    color: var(--color-navy);
+  }
+
+  .hero {
+    padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .hero .lead {
+    font-size: 1.1875rem;
+    color: var(--color-text-muted);
+    max-width: 620px;
+    margin-top: 1.25rem;
+  }
+
+  .cta-row {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.375rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid var(--color-navy);
+    transition: background-color 120ms ease, color 120ms ease;
+  }
+
+  .btn-primary {
+    background: var(--color-navy);
+    color: #ffffff;
+  }
+
+  .btn-primary:hover {
+    background: #172D49;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--color-navy);
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-accent);
+  }
+
+  .section {
+    padding: var(--section-padding-y) 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-alt {
+    background: var(--color-bg-alt);
+  }
+
+  .cards {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem 1.5rem 1rem;
+    border-radius: 2px;
+  }
+
+  .card h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .focus-list {
+    margin-top: 1rem;
+  }
+
+  .contact-list {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1.25rem;
+  }
+
+  .contact-list dt {
+    color: var(--color-text-muted);
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .contact-list dd {
+    margin: 0;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 0;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .site-footer p {
+    margin: 0;
+  }
+</style>
